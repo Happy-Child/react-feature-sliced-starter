@@ -20,8 +20,6 @@ module.exports = {
 		},
 		'ecmaVersion': 12,
 		'sourceType': 'module',
-
-		"projectFolderIgnoreList": [],
 		"project": "tsconfig.json"
 	},
 	'plugins': [
@@ -59,5 +57,7 @@ module.exports = {
 		"react/jsx-filename-extension": "off",
 		"max-len": ["error", { "code": 120 }],
 		"@typescript-eslint/no-explicit-any": "error",
-	}
+    "@typescript-eslint/explicit-function-return-type": "error",
+    "import/prefer-default-export": "off"
+  }
 };
