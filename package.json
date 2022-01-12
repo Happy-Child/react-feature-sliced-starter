@@ -1,26 +1,46 @@
 {
-  "name": "app",
+  "name": "pet-frontend",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "type-check": "tsc",
+    "lint-styles:fix": "npx stylelint \"**/*.scss\" --fix",
+    "lint-ts:fix": "eslint --ext .tsx --ext .ts ./src --no-error-on-unmatched-pattern --fix",
+    "prepare": "husky install",
+    "heroku:deploy": "APP_NAME=intro-pet-frontend; heroku container:push web -a $APP_NAME; heroku container:release web -a $APP_NAME"
+  },
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3"
   },
   "devDependencies": {
-    "typescript": "^4.5.0",
+    "@craco/craco": "^6.4.3",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.4.0",
     "@types/node": "^16.11.19",
     "@types/react": "^17.0.38",
-    "@types/react-dom": "^17.0.11"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test"
+    "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "7.11.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.7",
+    "stylelint": "^14.2.0",
+    "stylelint-config-standard": "^24.0.0",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
+    "typescript": "^4.5.0"
   },
   "browserslist": {
     "production": [
@@ -33,5 +53,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "yarn lint-ts:fix --cache",
+    "*.scss": "yarn lint-styles:fix"
+  },
+  "license": "MIT"
 }

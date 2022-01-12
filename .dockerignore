@@ -1,0 +1,6 @@
+.git
+docker-compose*
+node_modules
+dist
+.idea
+.eslintcache
