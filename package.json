@@ -9,7 +9,8 @@
     "type-check": "tsc",
     "lint-styles:fix": "npx stylelint \"**/*.scss\" --fix",
     "lint-ts:fix": "eslint --ext .tsx --ext .ts ./src --no-error-on-unmatched-pattern --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "heroku:deploy": "APP_NAME=intro-pet-frontend; heroku container:push web -a $APP_NAME; heroku container:release web -a $APP_NAME"
   },
   "dependencies": {
     "react": "^17.0.2",
