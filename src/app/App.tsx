@@ -1,7 +1,4 @@
 import React from 'react';
+import { AppRoutes } from './AppRoutes';
 
-export const App: React.FC = () => (
-  <main>
-    <h1>App</h1>
-  </main>
-);
+export const App: React.FC = () => <AppRoutes />;

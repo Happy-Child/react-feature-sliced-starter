@@ -1,0 +1,1 @@
+export { AuthRouterGuard } from './AuthRouterGuard';

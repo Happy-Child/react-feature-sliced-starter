@@ -2,5 +2,3 @@ export enum SORT_DURATION {
   DESC = 'DESC',
   ASC = 'ASC',
 }
-
-export const SORT_DURATION_DEFAULT = SORT_DURATION.DESC;

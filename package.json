@@ -13,8 +13,10 @@
     "heroku:deploy": "APP_NAME=intro-pet-frontend; heroku container:push web -a $APP_NAME; heroku container:release web -a $APP_NAME"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router-dom": "6",
     "react-scripts": "4.0.3"
   },
   "devDependencies": {
@@ -23,6 +25,7 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.4.0",
+    "@types/lodash": "^4.14.178",
     "@types/node": "^16.11.19",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
