@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { DASHBOARD_PATH, SIGN_IN_PATH } from '@/shared/constants';
 import { SignInPage, DashboardPage } from '@/pages';
+import { ROUTES_PATHS } from '@/shared/config';
 
 export const AppRoutes: React.FC = () => (
   <BrowserRouter>
     <Routes>
-      <Route path={DASHBOARD_PATH} element={<DashboardPage />} />
-      <Route path={SIGN_IN_PATH} element={<SignInPage />} />
+      <Route path={ROUTES_PATHS.DASHBOARD} element={<DashboardPage />} />
+      <Route path={ROUTES_PATHS.SIGN_IN} element={<SignInPage />} />
     </Routes>
   </BrowserRouter>
 );
